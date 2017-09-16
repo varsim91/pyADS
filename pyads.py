@@ -99,7 +99,7 @@ class ADS():
             fd = open(fullname, "wb")
             fd.write(content)
             fd.close()
-            self.streams.append(filename)
+            self.streams.append(os.path.basename(filename))
             return True
 
     def delete_stream(self, stream):
